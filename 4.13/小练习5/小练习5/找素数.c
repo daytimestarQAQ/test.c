@@ -8,8 +8,10 @@ int main()
 	int flag = 0;
 	for (i = 100;i <= 200;i++) {
 		flag = 0;
-		for (n=2;n <= squrt(i);n++) {
-			if (i % n == 0)flag=1;break;
+		for (n=2;n <= pow(i,1/2);n++) {
+			if (i % n == 0) {
+				flag = 1;break;
+			}
 
 		}if (flag == 0)printf("%dÊÇËØÊý\n", i);
 
