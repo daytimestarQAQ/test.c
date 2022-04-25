@@ -3,12 +3,19 @@
 
 #include<stdio.h>
 //ตÝน้
-int re_mystrlen(char* x)
+int re_mystrlen(char* arr)
+{
+	if (*arr != '\0')
+		return re_mystrlen(arr + 1)+1;		
+	else 
+		return 0;
+}
+int unre_mystrlen(char* arr)
 {
 	int count = 0;
-	if (*x != '\0')
+	while (*arr != '\0')
 	{
-		re_mystrlen(*x + 1);
+		arr++;
 		count++;
 	}
 	return count;
@@ -18,11 +25,11 @@ int main()
 {
 	char ch[] ="sdfsdf";
 
-	int num1 = re_mystrlen(&ch);
-	//int num2 = unre_mystrlen(&ch);
+	int num1 = re_mystrlen(ch);
+	int num2 = unre_mystrlen(ch);
 
-	printf("%d", num1);
-	//printf("%d", num2);
+	printf("%d\n", num1);
+	printf("%d\n", num2);
 
 
 	return 0;
