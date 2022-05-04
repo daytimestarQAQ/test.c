@@ -6,24 +6,22 @@
 //char arr[] = "abcdef";
 //逆序之后数组的内容变成：fedcba
 #include<stdio.h>
-#include<string>
+#include<string.h>
 
 void reverse_string(char* str)
 {
 	int tmp = *str;
 	int len = strlen(str);
 
-	if (*str != '\0')
-	{
-		*str = *(str + len - 1);//将最后一个元素放到第一个上
-		*(str + len - 1) = '\0';//将倒数第二个元素变为'\0'
-		//上两步为：将第一个元素和最后一个元素为递归的最小单位来递归
+	*str = *(str + len - 1);//将最后一个元素放到第一个上
+	*(str + len - 1) = '\0';//将倒数第二个元素变为'\0'
+	//上两步为：将第一个元素和最后一个元素为递归的最小单位来递归
 
-		reverse_string(str + 1);
-
-		//最后一步将最后一个元素替换位第一个
-		*(str + len - 1) = tmp;
-	}
+	if (strlen(str + 1) >= 2)
+	reverse_string(str + 1);
+	//最后一步将最后一个元素替换位第一个
+	*(str + len - 1) = tmp;
+	
 
 }
 int main()
