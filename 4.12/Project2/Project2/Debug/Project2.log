@@ -1,0 +1,4 @@
+﻿  源.c
+C:\Users\86134\Desktop\c语言学\test.c\4.12\Project2\Project2\源.c(7,13): warning C4047: “=”:“int [20]”与“int”的间接级别不同
+C:\Users\86134\Desktop\c语言学\test.c\4.12\Project2\Project2\源.c(7,13): error C2106: “=”: 左操作数必须为左值
+C:\Users\86134\Desktop\c语言学\test.c\4.12\Project2\Project2\源.c(8,9): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”

@@ -1,0 +1,4 @@
+﻿  分数求和.c
+C:\Users\86134\Desktop\c语言学\test.c\4.16\Project2\Project2\分数求和.c(12,24): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\86134\Desktop\c语言学\test.c\4.16\Project2\Project2\分数求和.c(15,23): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Project2.vcxproj -> C:\Users\86134\Desktop\c语言学\test.c\4.16\Project2\Debug\Project2.exe

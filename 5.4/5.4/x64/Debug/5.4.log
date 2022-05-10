@@ -1,0 +1,4 @@
+﻿  test_三子棋.c
+C:\Users\86134\Desktop\c语言学\test.c\5.4\5.4\test_三子棋.c(14,18): warning C4013: “choice”未定义；假设外部返回 int
+C:\Users\86134\Desktop\c语言学\test.c\5.4\5.4\test_三子棋.c(22,12): warning C4013: “play_move”未定义；假设外部返回 int
+  5.4.vcxproj -> C:\Users\86134\Desktop\c语言学\test.c\5.4\x64\Debug\5.4.exe

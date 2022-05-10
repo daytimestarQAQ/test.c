@@ -1,0 +1,6 @@
+﻿  舍罕王的失算.c
+C:\Users\86134\Desktop\c语言学\test.c\4.5\4.5\4.5\舍罕王的失算.c(17,24): warning C4244: “=”: 从“double”转换到“unsigned __int64”，可能丢失数据
+C:\Users\86134\Desktop\c语言学\test.c\4.5\4.5\4.5\舍罕王的失算.c(20,9): warning C4477: “printf”: 格式字符串“%u”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+C:\Users\86134\Desktop\c语言学\test.c\4.5\4.5\4.5\舍罕王的失算.c(20,9): message : 请考虑在格式字符串中使用“%llu”
+C:\Users\86134\Desktop\c语言学\test.c\4.5\4.5\4.5\舍罕王的失算.c(20,9): message : 请考虑在格式字符串中使用“%I64u”
+  4.5.vcxproj -> C:\Users\86134\Desktop\c语言学\test.c\4.5\4.5\Debug\4.5.exe
