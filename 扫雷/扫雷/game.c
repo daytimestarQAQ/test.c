@@ -47,7 +47,7 @@ int player_action(char show_board[ROWS][COLS], char mine_board[ROWS][COLS])
 		mark_mine(show_board, mine_board, ROW, COL);
 		break;
 	default:
-		printf("输入错误，请重新输入！");
+		printf("输入错误，请重新输入！\n");
 	}
 	return flag;
 }
@@ -71,10 +71,12 @@ void set_mine(char mine_board[ROWS][COLS], int row, int col)
 int demine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, int col)
 {
 	int x, y;
-	printf("请输入你想排雷的坐标：");
-	scanf("%d %d", &x, &y);
+	
+	int flag = 1;
 	
 	while (1) {
+		printf("请输入你想排雷的坐标：");
+		scanf("%d %d", &x, &y);
 		if (show_board[x][y] == '*') 
 		{
 			if (mine_board[x][y] == '1')
@@ -87,11 +89,9 @@ int demine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, in
 				over_mine(show_board, mine_board, x, y);
 				return 1;
 			}
-
-			break;
 		}
 		else
-			printf("坐标非法或已被占用，请重新输入：");
+			printf("坐标非法或已被占用,");	
 	}
 }
 //排雷时连续翻格子
@@ -125,16 +125,15 @@ void over_mine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int x, 
 void mark_mine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, int col)
 {
 	int x, y;
-	printf("请输入你想标记雷的坐标：");
 	while (1) {
+		printf("请输入你想标记雷的坐标：");
 		scanf("%d %d", &x, &y);
 		if (show_board[x][y] == '*') {
 			show_board[x][y] = 'X';
 			break;
 		}
 		else
-			printf("坐标非法或已被占用，请重新输入：");
-		break;
+			printf("坐标非法或已被占用，");
 	}
 }
 //判断棋盘是否全部翻开

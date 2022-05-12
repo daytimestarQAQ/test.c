@@ -19,7 +19,7 @@ void start_game()
 	print(show, ROW, COL);
 	//埋雷
 	set_mine(mine, ROW, COL);
-	print(mine, ROW, COL);//（调试用）
+	//print(mine, ROW, COL);//（调试用）
 	//玩家行动
 	while (flag)
 	{

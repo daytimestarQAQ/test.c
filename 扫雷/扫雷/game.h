@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<time.h>
 
-#define MINES 1//雷的数量
+#define MINES 10//雷的数量
 
 #define ROW 9
 #define COL 9
