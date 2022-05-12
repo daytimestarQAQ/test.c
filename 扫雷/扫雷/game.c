@@ -66,7 +66,6 @@ void set_mine(char mine_board[ROWS][COLS], int row, int col)
 			i++;
 		}
 	}
-
 }
 //排雷
 int demine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, int col)
@@ -95,7 +94,7 @@ int demine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, in
 			printf("坐标非法或已被占用，请重新输入：");
 	}
 }
-//排雷翻格子
+//排雷时连续翻格子
 void over_mine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int x, int y)
 {
 	//判断坐标是否翻过与是否合法
@@ -135,21 +134,33 @@ void mark_mine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row
 		}
 		else
 			printf("坐标非法或已被占用，请重新输入：");
+		break;
 	}
-	
 }
 //判断棋盘是否全部翻开
-int judge_ogame(char show_board[ROWS][COLS], int row, int col) {
+int judge_ogame(char show_board[ROWS][COLS],char mine_board[ROWS][COLS], int row, int col) {
 	int i, j;
-	for (i = 0; i < row; i++)
+	int mine = 0;
+	for (i = 1; i < row; i++)
 	{
-		for (j = 0; j < col; j++)
+		for (j = 1; j < col; j++)
 		{
 			if (show_board[i][j] == '*') {
 				return 1;
 			}
+			if (mine_board[i][j] == '1') {
+				if (show_board[i][j] == 'X') {
+					mine++;
+				}
+			}
 		}
 	}
-	printf("你赢了！！\n");
-	return 0;
+	//将雷全部真确标记
+	if (mine == MINES) {
+		printf("         你赢了！！！             \n");
+		return 0;
+	}
+	//未将雷全部真确标记
+	else
+		return 1;
 }

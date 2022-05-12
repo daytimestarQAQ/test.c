@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<time.h>
 
-#define MINES 2//雷的数量
+#define MINES 1//雷的数量
 
 #define ROW 9
 #define COL 9
@@ -23,7 +23,7 @@ int demine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, in
 //标记雷
 void mark_mine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int row, int col);
 //判断棋盘是否全部翻开
-int judge_ogame(char show_board[ROWS][COLS], int row, int col);
+int judge_ogame(char show_board[ROWS][COLS],char mine_board[ROWS][COLS], int row, int col);
 //排雷翻格子
 void over_mine(char show_board[ROWS][COLS], char mine_board[ROWS][COLS], int x, int y);
 

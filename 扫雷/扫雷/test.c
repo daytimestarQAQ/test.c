@@ -19,15 +19,18 @@ void start_game()
 	print(show, ROW, COL);
 	//埋雷
 	set_mine(mine, ROW, COL);
-	print(mine, ROW, COL);
+	print(mine, ROW, COL);//（调试用）
 	//玩家行动
 	while (flag)
 	{
-		if (player_action(show, mine, ROW, COL)==0)
+		// flag=1 游戏继续
+		// flag=0 游戏结束
+		if (player_action(show, mine, ROW, COL) == 0)
 			break;
-		//判断棋盘是否翻完
-		flag = judge_ogame(show, ROW, COL);
+		//打印棋盘
 		print(show, ROW, COL);
+		//判断棋盘是否翻完
+		flag = judge_ogame(show,mine, ROW, COL);
 	}
 }
 int main()
