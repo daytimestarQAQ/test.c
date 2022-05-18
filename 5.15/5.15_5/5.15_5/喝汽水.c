@@ -3,19 +3,22 @@
 
 
 #include<stdio.h>
-int qishui_number(int a) {
-	if (a >= 1) {
-		return qishui_number(a / 2) + a;
-	}
-	else
-	return 0;
-}
 int main()
 {
-	int money= 0;
+	int money = 0;
+	int total = 0;
+	int empty = 0;
 	printf("多少钱：");
 	scanf("%d", &money);
-	int num = qishui_number(money);
-	printf("可以买%d瓶\n",num);
+	//方法一
+	/*total = money;
+	empty = money;
+	while (empty > 1) {
+		total += empty / 2;
+		empty = empty / 2 + empty % 2;
+	}*/
+	//方法二
+	total = 2 * money - 1;
+	printf("可以买%d瓶\n",total);
 	return 0;
 }
