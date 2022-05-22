@@ -1,0 +1,4 @@
+﻿  逆置字符串.c
+C:\Users\86134\Desktop\c语言学\test.c\5.22\5.22\逆置字符串.c(6,1): warning C4047: “初始化”:“char”与“void *”的间接级别不同
+C:\Users\86134\Desktop\c语言学\test.c\5.22\5.22\逆置字符串.c(32,6): warning C4013: “gets”未定义；假设外部返回 int
+  5.22.vcxproj -> C:\Users\86134\Desktop\c语言学\test.c\5.22\x64\Debug\5.22.exe
