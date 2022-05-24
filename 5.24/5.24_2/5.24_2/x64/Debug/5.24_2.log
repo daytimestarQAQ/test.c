@@ -1,0 +1,3 @@
+﻿  改数字.c
+C:\Users\86134\Desktop\c语言学\test.c\5.24\5.24_2\5.24_2\改数字.c(19,14): warning C4013: “pow”未定义；假设外部返回 int
+  5.24_2.vcxproj -> C:\Users\86134\Desktop\c语言学\test.c\5.24\5.24_2\x64\Debug\5.24_2.exe
